@@ -1,0 +1,31 @@
+name: AnsamWarp
+version: 1.0.0
+main: com.pheakdey86.ansamwarp.AnsamWarp
+api-version: '1.21'
+author: Pheakdey86
+description: Essentials-style warp plugin with configurable countdown, sounds and messages.
+commands:
+  warp:
+    description: Teleport to a warp or list available warps.
+    usage: /warp [warp]
+    aliases: [warps]
+  setwarp:
+    description: Create or update a warp.
+    usage: /setwarp <name>
+  delwarp:
+    description: Delete a warp.
+    usage: /delwarp <name>
+  ansamwarp:
+    description: AnsamWarp administration command.
+    usage: /ansamwarp <reload|help>
+permissions:
+  ansamwarp.warp:
+    default: true
+  ansamwarp.warps:
+    default: true
+  ansamwarp.setwarp:
+    default: op
+  ansamwarp.delwarp:
+    default: op
+  ansamwarp.admin:
+    default: op

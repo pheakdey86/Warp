@@ -1,0 +1,84 @@
+#made by Pheakdey86
+#Tiktok: @pheakdey_86
+#Telegram: @Pheakdey86
+
+# If true, every AnsamWarp message is converted to Unicode small caps.
+# Set false to keep normal text.
+small_cap: true
+
+prefix: '&#00f5ff[&#1fe8eeᴀ&#3ddcddɴ&#5ccfccꜱ&#7ac2bbᴀ&#6ad4a4ᴍ&#5ae78e]&r '
+
+settings:
+  # Seconds before teleport. 3 = 3, 2, 1, then teleport.
+  teleport-delay-seconds: 3
+  # Seconds a player must wait before using /warp again. 0 disables cooldown.
+  cooldown-seconds: 0
+  # Cancel teleport if the player moves.
+  cancel-on-move: true
+  # Cancel teleport if the player takes damage.
+  cancel-on-damage: false
+  # Check that the destination is safe.
+  safe-teleport: true
+  # Allow teleporting between worlds.
+  cross-world: true
+  # If false, a player needs ansamwarp.warp.<warpname> for that warp.
+  require-per-warp-permission: false
+  # If true, /warps only shows warps the player can use.
+  filter-warps-by-permission: true
+
+messages:
+  teleporting: '[gradient]Teleporting to {WARP}'
+  countdown: '[green]{SECONDS}'
+  teleport-cancelled: '[red]Teleport cancelled because you moved.'
+  teleport-cancelled-damage: '[red]Teleport cancelled because you took damage.'
+  cooldown: '[red]Please wait {SECONDS}s before using warp again.'
+  warp-not-found: '[red]Warp {WARP} does not exist.'
+  no-warps: '[yellow]There are no warps available.'
+  warps-header: '[gradient]Available warps: &f{WARPS}'
+  setwarp: '[green]Warp {WARP} has been set.'
+  updated-warp: '[green]Warp {WARP} has been updated.'
+  delwarp: '[green]Warp {WARP} has been deleted.'
+  setwarp-usage: '[red]Usage: /setwarp <name>'
+  delwarp-usage: '[red]Usage: /delwarp <name>'
+  no-permission: '[red]You do not have permission to use this command.'
+  player-only: '[red]Only players can use this command.'
+  invalid-name: '[red]That warp name is invalid.'
+  reload: '[green]Configuration and warps reloaded.'
+  help: '[gradient]/warp [name] &7- teleport or list warps|[gradient]/setwarp <name> &7- create/update a warp|[gradient]/delwarp <name> &7- delete a warp|[gradient]/ansamwarp reload &7- reload'
+  unsafe: '[red]That warp location is not safe.'
+  cross-world-disabled: '[red]Cross-world teleportation is disabled.'
+
+# Message tags supported:
+# [gradient]text  -> gradient using gradient-start/end
+# [green]text      -> green
+# [red]text        -> red
+# [yellow]text     -> yellow
+# [aqua]text       -> aqua
+# [white]text      -> white
+# You can also use & color/format codes and &#RRGGBB hex colors.
+gradient-start: '#00f5ff'
+gradient-end: '#5ae78e'
+
+sounds:
+  enabled: true
+  teleport-start:
+    sound: ENTITY_ENDERMAN_TELEPORT
+    volume: 1.0
+    pitch: 1.0
+  countdown:
+    sound: BLOCK_NOTE_BLOCK_PLING
+    volume: 1.0
+    pitch: 1.5
+  teleport-success:
+    sound: ENTITY_PLAYER_LEVELUP
+    volume: 1.0
+    pitch: 1.0
+  teleport-cancel:
+    sound: ENTITY_VILLAGER_NO
+    volume: 1.0
+    pitch: 1.0
+
+# Optional command aliases for administrators.
+# Bukkit command aliases are declared in plugin.yml; this section is here for documentation/config consistency.
+aliases:
+  warp: [warp, warps]
